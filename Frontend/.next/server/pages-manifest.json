@@ -1,0 +1,9 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/staff/remainders": "pages/staff/remainders.js",
+  "/home/staffRemainders": "pages/home/staffRemainders.js",
+  "/auth/login": "pages/auth/login.js",
+  "/home/homepage": "pages/home/homepage.js"
+}

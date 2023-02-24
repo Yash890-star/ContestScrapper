@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.customGrid{
+  display: grid;
+  grid-template-columns: 40% 30% 30%;
+}
+
+body{
+  background-color: #181818;
+  color: white;
+}
+
+button{
+  background-color: #008b5d;
+  color: white;
+}
+
+input{
+  background-color: #373737;
+  color: white;
+}
+
+.compContainer{
+  background-color: #373737;
+
+}
+
+.navContainer{
+  background-color: #008b5d;
+}
+
+.timeContainer{
+  color: #aaaaaa;
+}
+
+.remainderGrid{
+  display: grid;
+  grid-template-columns: 60% 20% 20%;
+}
+
+.completionGrid{
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+p{
+  color: #008b5d;
+}
