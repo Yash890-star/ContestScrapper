@@ -13,13 +13,13 @@ app.use(cookieParser())
 app.use(bodyParser.json())
 app.use(cors({
     credentials: true,
-    origin: ['http://localhost:3001']
+    origin: ['http://localhost:3000']
 }))
 app.use(routes)
 
 mongoose.set('strictQuery', true)
 
-mongoose.connect('mongodb://localhost:27017/scrapper', {
+mongoose.connect('mongodb://mongodb:27017/scrapper', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }, (err) => {

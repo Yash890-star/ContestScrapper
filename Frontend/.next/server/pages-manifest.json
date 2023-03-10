@@ -5,5 +5,5 @@
   "/staff/remainders": "pages/staff/remainders.js",
   "/home/staffRemainders": "pages/home/staffRemainders.js",
   "/auth/login": "pages/auth/login.js",
-  "/home/homepage": "pages/home/homepage.js"
+  "/staff/homepage": "pages/staff/homepage.js"
 }

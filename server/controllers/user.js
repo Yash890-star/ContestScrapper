@@ -296,14 +296,15 @@ exports.getStaffRemainders = async (req,res,next) => {
     }
     const user = await User.findOne({ _id: claims._id })
     console.log(user.staffCompletions)
-    const staff = await Staff.findOne({ email: "staff@staff.com" })
+    const staff = await Staff.findOne({email:"yashwanthk523@gmail.com"})
+    console.log(staff)
     let a = []
-    for (let x of staff.remainders){
-        if(!user.staffCompletions.includes(x.name)){
-            a.push(x)
+        for (let x of staff.remainders){
+            if(!user.staffCompletions.includes(x.name)){
+                a.push(x)
+            }
         }
-    }
-    res.send(a)
+        res.send(a)
 }
 
 exports.postStaffCompletions = async (req,res,next) => {
