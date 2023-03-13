@@ -2,9 +2,8 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/home/staffRemainders": "pages/home/staffRemainders.js",
   "/auth/login": "pages/auth/login.js",
-  "/home/completions": "pages/home/completions.js",
-  "/home/homepage": "pages/home/homepage.js",
-  "/home/remainders": "pages/home/remainders.js"
+  "/staff/remainders": "pages/staff/remainders.js",
+  "/staff/login": "pages/staff/login.js",
+  "/staff/homepage": "pages/staff/homepage.js"
 }

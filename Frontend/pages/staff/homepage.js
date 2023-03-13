@@ -33,7 +33,7 @@ const Homepage = () => {
             }
         }
         console.log(y)
-        fetch('http://localhost:5001/remainder', {
+        fetch(`${process.env.NEXT_PUBLIC_BEHOST}/remainder`, {
             method: "POST",
             credentials: "include",
             headers: {"Content-Type":"application/json"},

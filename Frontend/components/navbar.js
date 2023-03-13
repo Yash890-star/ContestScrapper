@@ -6,7 +6,7 @@ const Navbar = () => {
     const router = useRouter()
 
     const logoutHandler = () => {
-        fetch('http://localhost:5001/logout', {
+        fetch(`${process.env.NEXT_PUBLIC_BEHOST}/logout`, {
             credentials: 'include'
         }).then(response => response.json()).then(
             data => {

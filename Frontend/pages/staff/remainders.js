@@ -6,7 +6,7 @@ const Remainders = () => {
     const [data, setData] = useState()
 
     useEffect(() => {
-        fetch('http://localhost:5001/getRemainders', {
+        fetch(`${process.env.NEXT_PUBLIC_BEHOST}/getRemainders`, {
             credentials: "include"
         }).then(response => response.json()).then(
             result => setData(result)

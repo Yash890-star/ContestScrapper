@@ -23,7 +23,7 @@ const competitions = () => {
     const submitHandler = (event) => {
         event.preventDefault()
         console.log(interested)
-        fetch('http://localhost:5001/apply', {
+        fetch(`${process.env.NEXT_PUBLIC_BEHOST}/apply`, {
             method: "POST",
             credentials: 'include',
             headers: {"Content-Type": "application/json"},

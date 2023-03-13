@@ -5,7 +5,7 @@ const Remainder = () => {
     const [data, setData] = useState()
 
     useEffect(() => {
-        fetch('http://localhost:5001/getRemainder', {
+        fetch(`${process.env.NEXT_PUBLIC_BEHOST}/getRemainder`, {
             credentials: 'include'
         }).then(response => response.json()).then(
             result => {
@@ -16,7 +16,7 @@ const Remainder = () => {
 
     const checkboxHandler = (event) => {
         let a = event.target.value
-        fetch('http://localhost:5001/postStatus', {
+        fetch(`${process.env.NEXT_PUBLIC_BEHOST}/postStatus`, {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             credentials: 'include',

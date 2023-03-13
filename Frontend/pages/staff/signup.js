@@ -10,7 +10,7 @@ const Signup = () => {
 
     const submitHandler = (event) => {
         event.preventDefault()
-        fetch('http://localhost:5001/staffRegister',{
+        fetch(`${process.env.NEXT_PUBLIC_BEHOST}/staffRegister`,{
             method: "POST",
             credentials: 'include',
             headers: {"Content-Type":"application/json"},

@@ -6,7 +6,7 @@ const StaffRemainders = () => {
     const [staffRemainders, setStaffRemainders] = useState()
 
     useEffect(() => {
-        fetch('http://localhost:5001/staffRemainders', {
+        fetch(`${process.env.NEXT_PUBLIC_BEHOST}/staffRemainders`, {
             credentials: "include"
         }).then(res => res.json()).then(data => setStaffRemainders(data))
     }, [])
@@ -14,7 +14,7 @@ const StaffRemainders = () => {
     const checkboxHandler = (event) => {
         document.getElementById(event.target.value).innerHTML=""
         document.getElementById(event.target.value).classList=[]
-        fetch('http://localhost:5001/staffCompleted',{
+        fetch(`${process.env.NEXT_PUBLIC_BEHOST}/staffCompleted`,{
             credentials: "include",
             method: "POST",
             headers: {"Content-Type": "application/json"},

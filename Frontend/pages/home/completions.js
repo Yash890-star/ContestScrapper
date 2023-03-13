@@ -6,7 +6,7 @@ const Completions = () => {
     const [completions, setCompletions] = useState()
 
     useEffect(() => {
-        fetch('http://localhost:5001/completions', {
+        fetch(`${process.env.NEXT_PUBLIC_BEHOST}/completions`, {
             credentials: "include"
         }).then(res => res.json()).then(
             data => setCompletions(data)

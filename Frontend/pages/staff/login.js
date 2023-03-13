@@ -19,7 +19,7 @@ const Login = () => {
 
     const submitHandler = (event) => {
         event.preventDefault()
-        fetch('http://localhost:5001/staffLogin', {
+        fetch(`${process.env.NEXT_PUBLIC_BEHOST}/staffLogin`, {
             method: "POST",
             credentials: 'include',
             headers: { "Content-Type": "application/json" },

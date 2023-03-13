@@ -19,7 +19,8 @@ const Login = () => {
     
     const submitHandler = (event) => {
         event.preventDefault()
-        fetch('http://localhost:5001/login', {
+        console.log(`${process.env.NEXT_PUBLIC_BEHOST}/login`)
+        fetch(`${process.env.NEXT_PUBLIC_BEHOST}/login`, {
             method: "POST",
             credentials: 'include',
             headers: {"Content-Type": "application/json"},

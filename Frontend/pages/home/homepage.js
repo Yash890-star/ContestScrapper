@@ -10,7 +10,7 @@ const HomePage = () => {
     let body = []
 
     useEffect(() => {
-        fetch('http://localhost:5001/competitions', {
+        fetch(`${process.env.NEXT_PUBLIC_BEHOST}/competitions`, {
             credentials: 'include'
         }).then(
             response => response.json()
@@ -29,7 +29,7 @@ const HomePage = () => {
                 y = x
             }
         }
-        fetch('http://localhost:5001/setRemainder',{
+        fetch(`${process.env.NEXT_PUBLIC_BEHOST}/setRemainder`,{
             method: "POST",
             headers: {"Content-Type": "application/json"},
             credentials: "include",

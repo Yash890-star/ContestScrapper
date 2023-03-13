@@ -30,25 +30,20 @@
       "static/chunks/main.js",
       "static/chunks/pages/auth/login.js"
     ],
-    "/home/completions": [
+    "/staff/homepage": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/home/completions.js"
+      "static/chunks/pages/staff/homepage.js"
     ],
-    "/home/homepage": [
+    "/staff/login": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/home/homepage.js"
+      "static/chunks/pages/staff/login.js"
     ],
-    "/home/remainders": [
+    "/staff/remainders": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/home/remainders.js"
-    ],
-    "/home/staffRemainders": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/home/staffRemainders.js"
+      "static/chunks/pages/staff/remainders.js"
     ]
   },
   "ampFirstPages": []
