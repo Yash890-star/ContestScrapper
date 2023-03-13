@@ -19,7 +19,7 @@ app.use(routes)
 
 mongoose.set('strictQuery', true)
 
-mongoose.connect('mongodb://mongodb:27017/scrapper', {
+mongoose.connect('mongodb+srv://root:Trojan890.@contestscrapper.xewnaj4.mongodb.net/?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }, (err) => {

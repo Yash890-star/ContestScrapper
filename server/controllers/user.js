@@ -279,15 +279,15 @@ exports.getCompletions = async (req, res, next) => {
     }
     const user = await User.findOne({ _id: claims._id })
     let response = []
-    for (let x of user.remainders){
-        if (user.completions.includes(x.name)){
+    for (let x of user.remainders) {
+        if (user.completions.includes(x.name)) {
             response.push(x)
         }
     }
     res.send(response)
 }
 
-exports.getStaffRemainders = async (req,res,next) => {
+exports.getStaffRemainders = async (req, res, next) => {
     const cookie = req.cookies['jwt']
     const claims = jwt.verify(cookie, 'key')
     console.log(claims)
@@ -296,18 +296,21 @@ exports.getStaffRemainders = async (req,res,next) => {
     }
     const user = await User.findOne({ _id: claims._id })
     console.log(user.staffCompletions)
-    const staff = await Staff.findOne({email:"yashwanthk523@gmail.com"})
+    const staff = await Staff.findOne({ email: "user@user.com" })
     console.log(staff)
     let a = []
-        for (let x of staff.remainders){
-            if(!user.staffCompletions.includes(x.name)){
+    if(staff && staff.remainders){
+        console.log("staff remainders")
+        for (let x of staff.remainders) {
+            if (!user.staffCompletions.includes(x.name)) {
                 a.push(x)
             }
         }
-        res.send(a)
+    }
+    res.send(a)
 }
 
-exports.postStaffCompletions = async (req,res,next) => {
+exports.postStaffCompletions = async (req, res, next) => {
     const cookie = req.cookies['jwt']
     const claims = jwt.verify(cookie, 'key')
     console.log(claims)
@@ -319,5 +322,5 @@ exports.postStaffCompletions = async (req,res,next) => {
     a.push(req.body.completed)
     user.staffCompletions = a
     user.save()
-    res.send({message:1})
+    res.send({ message: 1 })
 }
