@@ -44,7 +44,8 @@ exports.postLogin = async (req, res, next) => {
     if (req.body.loggedIn) {
         res.cookie('jwt', token, {
             httpOnly: true,
-            maxAge: 24 * 60 * 60 * 1000 * 100
+            maxAge: 24 * 60 * 60 * 1000 * 100,
+            sameSite: 'none'
         })
     }
     else {
